@@ -48,8 +48,11 @@ h2{
     /* max-width:80%;
     margin: auto; */
 
-    margin-left:100px;
-    margin-right:100px;
+    /* margin-left:100px;
+    margin-right:100px; */
+
+    margin-left:10%;
+    margin-right:10%;
     
     
 }
@@ -58,7 +61,8 @@ h2{
     background-color: #E9B0A8;
     border-radius: 20px;
     width: 30%;
-    margin:20px;
+    margin-top:50px;
+    margin-bottom:50px;
 
 }
 
@@ -93,6 +97,10 @@ h2{
 
 footer{
     background-color: #E9B0A8;
+    text-align: center;
+    padding-top:20px;
+    padding-bottom:30px;
+    
     
 }
 
@@ -102,12 +110,15 @@ footer p{
     text-align: center;
     color: #110F0F;
     font-weight: bold;
+    padding-bottom:0px; 
     
 }
 
-footer i{
-    
+.fa{
+    font-size: 30px;
 }
+
+
 
 
 
@@ -131,7 +142,6 @@ footer i{
     }
 
     #boxes div{
-        
         width: 100%;
         
     
