@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+</head>
+<body>
+    <h1>Experiment 2</h1>
+    <p class = "one">Try again!</p>
+    <script>
+
+
+        var randomNum = prompt("Let's play a guessing game! Try guessing what number I am thinking of on a scale of 1-5: ")
+
+        function randomInt(min,max){
+            return Math.floor((max-min+1)*Math.random()) + min;
+        }
+        
+
+        randomInt1 = randomInt(0,5)
+        console.log(randomInt1);
+
+        if (randomNum == randomInt1){
+            console.log("You are correct!")
+            
+            document.body.innerHTML = document.body.innerHTML.replace('Try again!', 'You are correct!');
+            document.body.style.backgroundColor = "pink"
+        }
+
+        else{
+            console.log("So close, but not quite. Try again!")
+        }
+
+    </script>
+    
+</body>
+</html>
