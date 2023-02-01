@@ -84,11 +84,12 @@ a:hover{
 
 
 #button{
-    color:#D9d9d9;
+    color:#E9B0A8;
 }
 
 
 
 #button:hover{
-    color:#E9B0A8;
+   
+    color:#D9d9d9;
 }
