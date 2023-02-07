@@ -38,9 +38,9 @@ input[type="text"]{
     font-size: 15px;
 }
 
-input[type="text"]:last-of-type{
+/* input[type="text"]:last-of-type{
     margin-bottom:50px;
-}
+} */
 
 input[type="radio"]{
     margin-top:10px;
