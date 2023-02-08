@@ -45,19 +45,23 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    border-radius: 10px;
+   
     
     
     
 }
 
 nav li a {
+    box-sizing: border-box;
     text-align: center;
-    display: block;
+    display: grid;
+    place-content: center;
     padding: 14px 16px;
     text-decoration: none;  
     background-color: #E9B0A8;
     color:#110F0F;
+    border-radius: 10px;
+    min-height: 63px;
 }
 
 nav li a:hover {
