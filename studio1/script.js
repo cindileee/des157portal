@@ -86,7 +86,6 @@
         }
 
         const fname = document.querySelector('#fname').value;
-        
         const bfname = document.querySelector('#bfname').value;
         const item = document.querySelector('#item').value;
         const place = document.querySelector('#place').value;
@@ -141,7 +140,7 @@
             dramarec.className = 'showing'
 
 
-            const myText = `<p>${fname} wants to go ${verb} and asks ${pronoun} best friend, ${bfname}, to tag along. Little do they know, they are about to embark on a once-in-a-life-time journey to find the ${item} at the magical land of ${place}.</p>`;
+            const myText = `<p>${fname} wants to go ${verb} and asks ${pronoun} best friend, ${bfname}, to tag along. Little do they know, they are about to embark on a once-in-a-life-time journey to find magical ${item} at the mystical land of ${place}.</p>`;
 
             synopsis.innerHTML = myText;
             yearBlank.innerHTML = yearText;
