@@ -1,21 +1,23 @@
-/* html{
-    scroll-behavior: smooth;
-} */
+.mobile-display{display:none}
+
+.desktop-display{display:block}
 
 body{
     background-color: #141414;
-    margin-top: 100px;
-    /* overflow: hidden; */
-}
-
-section{   
-    margin-bottom: 300px;
     
 }
 
 #form1, #form2{
     max-width: 400px;
     margin: auto;
+    margin-top: 100px;
+    
+
+}
+
+#dramarec{
+    margin-top: 50px;
+    
 }
 
 h2{
@@ -28,10 +30,10 @@ h2{
 
 p{
     font-family: Arial, Helvetica, sans-serif;
-    color: #ffffff;;
+    color: #777777;
     font-size: 18px;
     line-height:20px;
-    margin-top:20px;
+    margin-top:10px;
     margin-bottom:30px;
 }
 
@@ -47,9 +49,12 @@ label{
 input[type="text"]{
     background-color: #333333;
     border: none;
-    padding:10px;
+    padding-top:10px;
+    padding-bottom:10px;
     border-radius: 5px;
-    width: 100%;
+    padding-left: 3%;
+    padding-right: 3%;
+    width: 94%;
     margin-top:10px;
     margin-bottom:20px;
     color:#ffffff;
@@ -67,21 +72,19 @@ input[type="radio"]{
     accent-color: #cc0000;
 }
 
-/* label[for="pronoun"]{
-    margin-top:10px;
-    margin-bottom:10px;
-    color: #696969;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    font-weight: bold;
-    letter-spacing: 0.3px;
-} */
-
 #pronounDiv{
     margin-bottom: 20px;
+    padding-top:10px;
 }
 
-#nextbutton, #submitbutton{
+#pronounDiv label{
+    color: #d9d9d9;
+    font-size: 18px;
+    font-weight: 400;
+    
+}
+
+#nextbutton, #submitbutton, #backbutton{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     font-weight: bold;
@@ -91,48 +94,61 @@ input[type="radio"]{
     border-radius: 5px;
     border: none;
     text-decoration: none;
-    
+    margin-top: 30px;
     
 }
 
-#nextbutton:hover, #submitbutton:hover{
+#backbutton{
+    background-color: #777777;
+}
+
+#emptynext{
+    display: flex;
+    justify-content: end;
+}
+
+#twobuttons{
+    
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+#nextbutton:hover, #submitbutton:hover, #backbutton:hover{
     background-color: #cc0000;
     color: #ffffff;
 }
 
 
 
-form{
-    margin-bottom:30px;
-}
-
-#form2{
-    padding-top: 100px;
-}
-
-#dramarec{
-    padding-top: 50px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 img{
-    /* position: relative; */
     display: block;
     margin-left: auto;
     margin-right: auto;
     max-width:800px;
    
+}
+
+#wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+#content{
+    position: relative;
+    width: max-content;
+}
+
+i{
+    color: #ffffff;
+    font-size: 30px;
+    position: absolute;
+    top:20px;
+    right:20px;
+    
+    
+    
 }
 
 
@@ -142,34 +158,8 @@ img{
     margin: auto;
     margin-top:-140px;
     font-size: 50px;
+    position: relative;
 }
-
-/* #button{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap:15px;
-    background-color: #ffffff;
-    padding:10px 20px;
-    width:70px;
-    border-radius: 5px;
-    position: absolute;
-}
-
-#button i{
-    color: #141414;
-    font-size:25px;
-}
-
-#button p{
-    color: #141414;
-    font-size:20px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding:0;
-    margin:0; 
-} */
-
-
 
 #info{
     display: flex;
@@ -178,28 +168,133 @@ img{
     margin: auto;
     gap:50px;
     padding-top:100px;
+    
+}
+
+#exit{
+    width:700px;
+    margin:auto;
+    text-align: end;
+    color: white;
+}
+
+#exit:hover{
+    color: #777777;
 }
 
 
 
 #description{
-    /* margin-left:450px; */
-
-    /* max-width: 400px; */
-
-    
     max-width: 500px;
     margin: auto;
 
 }
 
 #description p{
-    
-    /* max-width: 40%; */
     line-height: 30px;
     font-size: 20px;
+    color:#ffffff;
 }
 
 #cast_genre p{
     font-size: 18px;
+    color:#ffffff;
+}
+
+
+.showing{
+    display:block;
+}
+
+.hidden{
+    display: none;
+}
+
+#warningBlank{
+    color: #cc0000;
+    font-weight: bold;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+
+    .mobile-display{display:block}
+    
+    .desktop-display{display:none}
+
+    body{
+        margin-left: 5%;
+        margin-right: 5%;
+
+        
+    }
+
+
+    img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width:100%;
+       
+    }
+    
+    #wrapper{
+        display: flex;
+        justify-content: center;
+    }
+    
+    #content{
+        position: relative;
+        width: max-content;
+    }
+
+    #title {
+        max-width: 700px;
+        margin: auto;
+        margin-top:20px;
+        
+        font-size: 30px;
+        position: relative;
+    }
+    
+    #info{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        gap:0px;
+        padding-top:0px;
+        
+        
+        
+    }
+
+    #description{
+        padding:0;
+        margin-left:0;
+        margin-top:15px;
+    }
+
+    #description p{
+        margin-top:0;
+        margin-bottom:10px;
+        line-height: 25px;
+        font-size: 15px;
+    }
+
+    #cast_genre p{
+        font-size: 15px;
+        padding:0;
+        margin-bottom:5px;
+    }
+
+    #synopsis p{
+        font-size:17px;
+    }
+
+    
+    
 }

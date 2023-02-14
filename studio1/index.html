@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MadLibs</title>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,41 +24,47 @@
     <main>
 
         <section>
-            <div id="form1">
+            <div id="form1" class="showing">
+                
+
                 <h2>Personal Information</h2>
                 <p>
-                    Please provide the following information to receive a drama recommendation.
+                    Please provide the following information to receive a drama recommendation. 
                 </p>
+
+                <p><span id="warningBlank"></span></p>
         
-                <form> 
+                <form id = "myform"> 
         
-                    <label>First Name<br>
-                        <input type="text" id = "fname" name = "fname">
-                    </label>
+                    <label>First Name<br></label>
+                    <input type="text" id = "fname" name = "fname">
+
+                    
         
                     <div id ="pronounDiv">
-                        <label for = "fname">Pronoun</label><br>
-                        <input type="radio" id = "hpronoun" name = "hpronoun">
+                       
+                        <input type="radio" id = "hpronoun" name = "pronoun" value = "his">
                         <label for = "hpronoun">he/him/his</label><br>
-                        <input type="radio" id = "spronoun" name = "spronoun">
+                        <input type="radio" id = "spronoun" name = "pronoun" value = "her">
                         <label for = "spronoun">she/her/hers</label><br>
-                        <input type="radio" id = "tpronoun" name = "tpronoun">
+                        <input type="radio" id = "tpronoun" name = "pronoun" value = "their">
                         <label for = "tpronoun">they/them/theirs</label><br>
                     </div>
         
-                    <label>Birth Year<br>
-                        <input type="text" id = "year" name = "year"><br>
-                    </label>
+                    <label>Birth Year<br></label>
+                    <input type="text" id = "year" name = "year" ><br>
                     
-                    <label>Best Friend's Name<br>
-                        <input type="text" id = "bfname" name = "bfname"><br>
-                    </label>
-        
+                    <label>Best Friend's Name<br></label>
+                    <input type="text" id = "bfname" name = "bfname" ><br>
+
+
+                    <div id = "emptynext">
+                        <input type="submit" id = nextbutton value="Next">
+                    </div>
+                   
                     
                 </form>
-    
-                <a href="#form2" id = "nextbutton">Next</a>
-    
+
             </div>
         </section>
 
@@ -67,7 +72,7 @@
 
         
         <section>
-            <div id = "form2">
+            <div id = "form2" class="hidden">
                 <h2>Preferences</h2>
                 <p>
                     Please provide the following information to receive a drama recommendation.
@@ -79,65 +84,71 @@
                     <input type="text" id = "fnumber" name = "fnumber"><br>
     
                     <label for = "genre">Favorite Genre</label><br>
-                    <input type="text" id = "genre" name = "genre"><br>
+                    <input type="text" id = "genre" name = "genre" ><br>
     
-                    <label for = "verb">Favorite Verb</label><br>
-                    <input type="text" id = "verb" name = "verb"><br>
+                    <label for = "verb">Favorite Verb <span style = "color:#777777; font-weight: 400;">(ending in -ing)</span></label><br>
+                    <input type="text" id = "verb" name = "verb" ><br>
     
                     <label for = "place">Favorite Place</label><br>
-                    <input type="text" id = "place" name = "place"><br>
+                    <input type="text" id = "place" name = "place" ><br>
     
-                    <label for = "ritem">Random Item</label><br>
-                    <input type="text" id = "ritem" name = "ritem"><br>
+                    <label for = "item">Random Item</label><br>
+                    <input type="text" id = "item" name = "item"><br>
+
+                    <div id = "twobuttons">
+                        <input type="submit" id = backbutton value="Back">
+                    
+                        <input type="submit" id = submitbutton value="Submit">
+    
+                    </div>
+
                     
                 </form>
-                <a href="#dramarec" id = "submitbutton">Submit</a>
             </div>
         </section>
         
         <section>
-            <div id = "dramarec">
-                <img src="../images/midjourney3.png" alt = hero>
-                <h2 id = "title">The Search For [Item]</h2>
+            <div id = "dramarec" class="hidden">
 
-                <!-- <div id = "button">
-                    <div>
-                        <i class="fa-sharp fa-solid fa-play"></i>
+                <div id = "wrapper">
+                    <div id = 'content'>
+                    
+                        <img class = "desktop-display"src="../images/midjourney3.png" alt = hero>
+
+                        <img class = "mobile-display"src="../images/midjourney.png" alt = hero>
+    
+                        <i id = "exit" class="fa-solid fa-circle-xmark"></i>
+                        <h2 id = "title">The Search For <span id="itemBlank"></span></h2>
+
+    
+                        
                     </div>
-                    <div><p>Play</p></div>
                 </div>
 
-                <div id = "button2">
-                    <i class="fa-light fa-plus"></i>
-                </div> -->
+                
+                
+                
 
                 <div id="info">
                     <div id="description">
 
-                        <p>[year] [number] Episodes</p>
-    
-                        <p>
-                            [name] wants to [verb] and asks [pronoun] best friend, [bf's name] to tag along. Little do they know, they are about to embark on a once-in-a-life-time journey to find the [item] at the magical land of [place].
-                        </p>
+                        <p><span id="yearBlank"></span> <span style="border: solid #777777; font-size: 18px; padding: 2px 5px; ">TV-14</span> <span id="fnumberBlank"></span> Episodes</p>
+
+                        <article id = "synopsis"></article>
+                        
     
                     </div>
+
     
                     <div id="cast_genre">
-                        <p><span style = "color: #777777;">Cast:</span> [name], [bf's name], more</p>
+                        <p><span style = "color: #777777;">Cast:</span> <span id="castBlank"></span>, <em>more</em></p>
     
-                        <p><span style = "color: #777777;">Genre:</span>  [genre]</p>
+                        <p><span style = "color: #777777;">Genre:</span> <span id="genreBlank"></span></p>
                     </div>
 
-
+                    
                 </div>
 
-                
-
-                
-
-                
-
-                
                 
     
                 
