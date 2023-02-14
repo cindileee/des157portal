@@ -233,6 +233,10 @@ i{
         
     }
 
+    #form1, #form2{
+        margin-top:50px;
+    }
+
 
     img{
         display: block;
