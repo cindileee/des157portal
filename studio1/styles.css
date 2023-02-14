@@ -156,8 +156,8 @@ i{
 #title {
     max-width: 700px;
     margin: auto;
-    margin-top:-140px;
-    font-size: 50px;
+    margin-top:-130px;
+    font-size: 40px;
     position: relative;
 }
 
@@ -274,8 +274,10 @@ i{
 
     #description{
         padding:0;
+        margin-right:0;
         margin-left:0;
         margin-top:15px;
+        max-width: 100%;
     }
 
     #description p{
@@ -283,13 +285,17 @@ i{
         margin-bottom:10px;
         line-height: 25px;
         font-size: 15px;
+        
     }
 
     #cast_genre p{
         font-size: 15px;
         padding:0;
         margin-bottom:5px;
+        
     }
+
+
 
     #synopsis p{
         font-size:17px;
