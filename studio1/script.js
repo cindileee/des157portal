@@ -15,6 +15,8 @@
     const form2 = document.getElementById('form2');
     const dramarec = document.getElementById('dramarec');
 
+    var radioButtons = document.getElementsByName("pronoun");
+
     backbutton.addEventListener('click', function(event){
         event.preventDefault();
         form1.className = 'showing'
@@ -152,6 +154,12 @@
             for (const eachField of formData){
                 eachField.value = '';
             }
+
+            
+            for(var i=0;i<radioButtons.length;i++){
+                radioButtons[i].checked = false;
+            }    
+                    
 
             
         }
