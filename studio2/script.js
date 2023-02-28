@@ -18,30 +18,23 @@
         document.querySelector("#image").className = "one";
     });
 
-    document.querySelector("#bats").addEventListener("mouseover", function(event){
-        event.preventDefault();
-        overlay[1].className = "show";
-        document.querySelector("#image").className = "two";
-    });
-
     document.querySelector("#cuffs").addEventListener("mouseover", function(event){
         event.preventDefault();
         overlay[2].className = "show";
         document.querySelector("#image").className = "three";
     });
 
+    document.querySelector("#bats").addEventListener("mouseover", function(event){
+        event.preventDefault();
+        overlay[1].className = "show";
+        document.querySelector("#image").className = "two";
+    });
 
-
+    
 //zoom out
     document.querySelector("#dragon").addEventListener("mouseout", function(event){
         event.preventDefault();
         overlay[0].className = "hide";
-        document.querySelector("#image").className = "start";
-    });
-
-    document.querySelector("#bats").addEventListener("mouseout", function(event){
-        event.preventDefault();
-        overlay[1].className = "hide";
         document.querySelector("#image").className = "start";
     });
 
@@ -51,12 +44,13 @@
         document.querySelector("#image").className = "start";
     });
 
+    document.querySelector("#bats").addEventListener("mouseout", function(event){
+        event.preventDefault();
+        overlay[1].className = "hide";
+        document.querySelector("#image").className = "start";
+    });
+
     
-
-
-
-
-
 
 
 //auto scroll 1
@@ -149,6 +143,4 @@
     }
 
 
-
-    
 })();
