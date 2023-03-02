@@ -7,26 +7,28 @@
     
 
 //zoom in with overlays
-    const overlay = document.querySelectorAll("#overlay");
+    const overlay1 = document.querySelectorAll("#overlay1");
+    const overlay2 = document.querySelectorAll("#overlay2");
+    const overlay3 = document.querySelectorAll("#overlay3");
 
     
     document.querySelector("#dragon").addEventListener("mouseover", function(event){
         event.preventDefault();
         //opens overlay
-        overlay[0].className = "show";
+        overlay1[0].className = "show";
         //zoom in
         document.querySelector("#image").className = "one";
     });
 
     document.querySelector("#cuffs").addEventListener("mouseover", function(event){
         event.preventDefault();
-        overlay[2].className = "show";
+        overlay3[0].className = "show";
         document.querySelector("#image").className = "three";
     });
 
     document.querySelector("#bats").addEventListener("mouseover", function(event){
         event.preventDefault();
-        overlay[1].className = "show";
+        overlay2[0].className = "show";
         document.querySelector("#image").className = "two";
     });
 
@@ -34,19 +36,19 @@
 //zoom out
     document.querySelector("#dragon").addEventListener("mouseout", function(event){
         event.preventDefault();
-        overlay[0].className = "hide";
+        overlay1[0].className = "hide";
         document.querySelector("#image").className = "start";
     });
 
     document.querySelector("#cuffs").addEventListener("mouseout", function(event){
         event.preventDefault();
-        overlay[2].className = "hide";
+        overlay3[0].className = "hide";
         document.querySelector("#image").className = "start";
     });
 
     document.querySelector("#bats").addEventListener("mouseout", function(event){
         event.preventDefault();
-        overlay[1].className = "hide";
+        overlay2[0].className = "hide";
         document.querySelector("#image").className = "start";
     });
 
@@ -110,12 +112,14 @@
 
 //slideshow
     const myImages = [
-       'fav1.png',
-       'fav5.png',
-       'fav6.png',
-       'fav7.png',
-       'fav8.png',
-       'fav9.png',
+        'fav1_.jpg',
+        'fav2.jpg',
+        'fav4_.jpg',
+        'fav5_.jpg',
+        'fav6_.jpg',
+        'fav7_.jpg',
+        'fav8_.jpg',
+        'fav9_.jpg'
     ];
 
     let currentImage = 0;
