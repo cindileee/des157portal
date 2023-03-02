@@ -31,11 +31,13 @@ header p{
 
 nav{
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap:20px;
     width:50%;
     margin: auto;
     margin-bottom: 30px;
+    
     
     
      
@@ -46,6 +48,7 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
+
    
     
     
