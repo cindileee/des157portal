@@ -1,0 +1,52 @@
+body{
+    width:800px;
+	margin:auto;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+
+img{
+    max-width: 100%;
+}
+
+figcaption{
+    padding-top: 10px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+h2{
+    font-size: 50px;
+    margin:0;
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 0px;
+    
+}
+
+h3{
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #111111;
+}
+
+p{
+    font-size:20px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5em;
+    color: #111111;
+}
+
+
+a{
+    text-decoration: none;
+    color: #767676;
+    font-size:15px;
+    
+    
+
+}
+
+a:hover{
+    color:  #95c0cb;
+}
