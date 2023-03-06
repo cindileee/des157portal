@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of PIG</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;700;800&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600&family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<link href="styles.css" rel="stylesheet">
+	<script src="script.js" defer></script>
+</head>
+<body>
+    <div id="instructions" class="showing">
+        <h1>Game of PIG</h1>
+        <p>There are two players. The player whose turn it is rolls the dice. The total of the roll is added to the current player's score, unless either die comes up as a "one". If this happens, this player's turn is over, and it is the other player’s turn. After each roll, the current player can either roll again, (assuming a "one" was not rolled) or if the current player feels that luck is running thin, they can pass to the other player. The first player to get 30 points or higher wins.</p> 
+        
+        <p>Oh, and if you roll two "ones" (snake eyes), your current score gets zeroed out. So don’t do that.</p>
+
+        <button id="exit">Continue</button>
+
+        <!-- <i id = "exit" class="fa-solid fa-circle-xmark"></i> -->
+
+    </div>
+    
+    <!-- <div id="gamecontrol" class="showing">
+        <h2>Start a Game</h2>
+        <button id="startgame">Start</button>
+
+    </div> -->
+
+   
+    
+    <div id="score" class="hidden">
+        <!-- <h2>Scoreboard</h2> -->
+        <div id ="playerscore">
+            <div>
+                Player 1<br>
+                <br>
+                0
+            </div>
+    
+            <div>
+                Player 2<br>
+                <br>
+                0
+            </div>
+        </div>
+     </div>
+     
+
+    <div id="game" class="hidden">
+        <!-- <div id="pandas">
+            <img src="images/panda.png" alt="pandas">
+            <img src="images/panda.png" alt="pandas">
+        </div> -->
+    </div>
+
+    
+
+    
+    <div id="actions" class="hidden"></div>
+
+     <div id="gamecontrol" class="hidden">
+        <h2>Start a Game</h2>
+        <button id="startgame">Start</button>
+
+    </div>
+    
+    
+    
+</body>
+</html>

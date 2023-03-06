@@ -1,0 +1,212 @@
+.showing{
+    display:block;
+}
+
+.hidden{
+    display: none;
+}
+
+body {
+    max-width: 1000px;
+    margin: auto;
+    font-family: Arial;
+    color: #333;
+    padding: 50px;
+    line-height: 1.5em;
+}
+
+button { 
+    padding: 10px;
+}
+
+div {
+    padding: 20px;
+}
+
+#instructions{
+    background-color: #FFF4E3;
+    border: #AF8C73 solid 20px;
+    border-radius: 30px;
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+    
+
+}
+
+
+
+h1{
+    text-align: center;
+}
+
+#introductions p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    line-height: 1.5em;
+    text-align: left;
+    
+}
+
+/* #gamecontrol, #score {
+    background-color: #FFF4E3;
+    border: #AF8C73 solid 20px;
+    border-radius: 30px;
+    text-align: center;
+} */
+
+#score {
+    background-color: #FFF4E3;
+    border: #AF8C73 solid 20px;
+    border-radius: 30px;
+    text-align: center;
+    max-width: 400px;
+    margin:auto;
+
+    
+}
+
+
+
+#game{
+    margin-top:50px;
+    /* background-color: pink; */
+}
+
+#gamecontrol {
+    background-color:#fff;
+    text-align: center;
+
+    /* background-color: #FFF4E3;
+    border: #AF8C73 solid 20px;
+    border-radius: 30px;
+    text-align: center; */
+    
+}
+/* 
+#game{
+    position: absolute;
+    top:100px;
+    left:500px;
+} */
+
+#game p{
+    font-weight:600;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    /* font-weight: 400; */
+}
+
+#pandas{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* #showimage{
+    display: flex;
+    justify-content: space-between;
+
+} */
+
+#showimage{
+    display: flex;
+    justify-content: center;
+    gap:50px;
+    background-color: #fff;
+
+}
+
+img{
+    max-width: 10%;
+}
+
+#actions {
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    justify-content: center;
+    
+    /* position: absolute;
+    top:700px;
+    left: 35%; */
+    
+    
+}
+button{
+    min-width: 150px;
+}
+
+#exit{
+    background-color: #FFF4E3;
+    border: #AF8C73 solid 4px;
+    border-radius: 10px;
+    font-family: 'Abhaya Libre', serif;
+    font-weight: 800;
+    font-size: 30px;
+    color: #AF8C73;
+    
+
+}
+
+#exit:hover{
+    background-color: #AF8C73;
+    /* border: #AF8C73 solid 2px; */
+    color: #FFF4E3;
+    /* transform: scale(1.1); */
+    border-radius: 10px;
+    font-family: 'Abhaya Libre', serif;
+    font-weight: 800;
+}
+
+
+#startgame, #quit, #roll, #pass, #rollagain{
+    background-color: #FFF4E3;
+    border: #AF8C73 solid 4px;
+    border-radius: 10px;
+    font-family: 'Abhaya Libre', serif;
+    font-weight: 800;
+    font-size: 30px;
+    color: #AF8C73;
+
+}
+
+#startgame:hover, #quit:hover, #roll:hover, #pass:hover, #rollagain:hover{
+    background-color: #AF8C73;
+    /* border: #AF8C73 solid 2px; */
+    color: #FFF4E3;
+    /* transform: scale(1.1); */
+    border-radius: 10px;
+    font-family: 'Abhaya Libre', serif;
+    font-weight: 800;
+}
+
+/* p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+} */
+
+h2{
+    font-family: 'Abhaya Libre', serif;
+    font-weight: 800;
+    font-size: 50px;
+
+    
+}
+
+#score h2{
+    margin-bottom: 10px;
+}
+
+#playerscore{
+    display: flex;
+    font-family: 'Abhaya Libre', serif;
+    font-weight: 800;
+    font-size: 30px;
+    justify-content: center;
+    padding: 0;
+}
+
+
+
