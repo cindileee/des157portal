@@ -14,8 +14,10 @@
 
 	//audio
 	const audio = new Audio('sound/buttonclick.mp3');
-	const audio2 = new Audio('sound/winningsound.mp3');
+	// const audio2 = new Audio('sound/winningsound.mp3');
+    const audio2 = new Audio('sound/cafesound.mp3');
 	
+    
 
 	//exit button
     exitbutton.addEventListener('click', function(event){
@@ -23,6 +25,7 @@
         instructions.className = 'hidden'
         gameControl.className = 'showing'
 		audio.play();
+        
 		
     })
 
@@ -46,6 +49,8 @@
 	//start the game 
 	startGame.addEventListener('click', function () {
 		audio.play();
+        audio2.play();
+        
 
         instructions.className = 'hidden';
         startGame.className = 'hidden';
@@ -64,6 +69,7 @@
 			
 			
 			location.reload();
+            
 			
 			});
 
@@ -178,7 +184,7 @@
 			wins with ${gameData.score[gameData.index]} points!</p>`;
 			// showCurrentScore();
 			game.innerHTML = '';
-			audio2.play();
+			
 			
 
 
