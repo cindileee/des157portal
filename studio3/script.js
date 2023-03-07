@@ -14,7 +14,6 @@
 
 	//audio
 	const audio = new Audio('sound/buttonclick.mp3');
-	// const audio2 = new Audio('sound/winningsound.mp3');
     const audio2 = new Audio('sound/cafesound.mp3');
 	
     
@@ -109,14 +108,13 @@
 
 		gameData.rollSum = gameData.roll1 + gameData.roll2;
 
-		// if two 1's are rolled...
+		// if two 1's are picked...
 		if( gameData.rollSum === 2 ){ 
 			game.innerHTML += '<p>Oh snap! Snake eyes!</p>';
 			gameData.score[gameData.index] = 0;
 			gameData.index ? (gameData.index = 0) : (gameData.index = 1);
 			showCurrentScore();
 			setTimeout(setUpTurn, 2000);
-            // setTimeout(setUpTurn, 0);
 		}
 
 		// if either die is a 1...
@@ -126,15 +124,14 @@
 				gameData.panda[gameData.index]
 			}</p>`;
 			setTimeout(setUpTurn, 2000);
-            // setTimeout(setUpTurn, 0);
 		}
 
-		// if neither die is a 1...
+		// if neither boba is a 1...
 		else { 
 			gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
 			actionArea.innerHTML = '<button id="rollagain">Pick Again</button> <button id="pass">Pass</button>';
 
-			//roll again  and click buttons
+			//pick again  and click buttons
 			document.getElementById('rollagain').addEventListener('click', function () {
 				audio.play();
 				throwDice();
@@ -155,7 +152,7 @@
 		<img src="${gameData.dice[gameData.roll2-1]}"></div>`;
 	}
 
-
+    //check the winning condition and if they won, show win message
 	function checkWinningCondition() {
 		if (gameData.score[gameData.index] > gameData.gameEnd) {
 			
@@ -197,6 +194,7 @@
 		}
 	}
 
+    //scoreboard
 	function showCurrentScore() {
         
         score.innerHTML = `

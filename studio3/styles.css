@@ -7,11 +7,8 @@
 }
 
 body {
-    max-width: 1200px;
-    
+    max-width: 1200px;   
     margin: auto;
-    /* font-family: Arial; */
-    color: #333;
     padding: 50px;
     line-height: 1.5em;
     
@@ -19,7 +16,6 @@ body {
 }
 
 #box{
-    /* max-width: 700px; */
     height: 700px;
     margin: auto;
     border: #AF8C73 solid 10px;
@@ -36,9 +32,6 @@ div {
 }
 
 #instructions{
-    /* background-color: #FFF4E3;
-    border: #AF8C73 solid 20px;
-    border-radius: 30px; */
     text-align: center;
     max-width: 500px;
     margin: auto;
@@ -52,7 +45,6 @@ h1{
     text-align: center;
     font-size: 50px;
     padding-bottom: 20px;
-    /* color: #AF8C73; */
 }
 
 #instructions p{
@@ -63,19 +55,9 @@ h1{
     
 }
 
-/* #gamecontrol, #score {
-    background-color: #FFF4E3;
-    border: #AF8C73 solid 20px;
-    border-radius: 30px;
-    text-align: center;
-} */
-
-
 
 
 #game{
-    /* margin-top:50px; */
-    /* background-color: pink; */
     margin-top: 0px;
     margin-bottom: 0px;
     padding-top: 0px;
@@ -83,28 +65,13 @@ h1{
 }
 
 #gamecontrol {
-    /* background-color:#fff; */
     text-align: center;
     padding:0;
     margin:0;
     
-
-    /* background-color: #FFF4E3;
-    border: #AF8C73 solid 20px;
-    border-radius: 30px;
-    text-align: center; */
-    
 }
-/* 
-#game{
-    position: absolute;
-    top:100px;
-    left:500px;
-} */
 
 #game p{
-    /* background-color: #FFF; */
-    /* max-width: 500px; */
     margin: auto;
     margin-bottom: 20px;
     font-weight:600;
@@ -119,11 +86,6 @@ h1{
     justify-content: space-between;
 }
 
-/* #showimage{
-    display: flex;
-    justify-content: space-between;
-
-} */
 
 #showimage{
     display: flex;
@@ -145,10 +107,6 @@ h1{
     flex-direction: row;
     gap: 160px;
     justify-content: center;
-    
-    /* position: absolute;
-    top:700px;
-    left: 35%; */
     margin-bottom:0;
     padding-bottom:0;
     
@@ -172,25 +130,11 @@ button{
 
 #exit:hover{
     background-color: #AF8C73;
-    /* border: #AF8C73 solid 2px; */
     color: #FFF4E3;
-    /* transform: scale(1.1); */
     border-radius: 10px;
     font-family: 'Abhaya Libre', serif;
     font-weight: 800;
 }
-
-
-/* #startgame, #quit, #roll, #pass, #rollagain{
-    background-color: #FFF4E3;
-    border: #AF8C73 solid 4px;
-    border-radius: 10px;
-    font-family: 'Abhaya Libre', serif;
-    font-weight: 800;
-    font-size: 30px;
-    color: #AF8C73;
-
-} */
 
 #startgame, #quit{
     background-color: #FFF4E3;
@@ -205,7 +149,6 @@ button{
 
 #roll, #pass, #rollagain{
     background-color: #AF8C73;
-    /* border: #AF8C73 solid 4px; */
     border-radius: 10px;
     font-family: 'Abhaya Libre', serif;
     font-weight: 800;
@@ -214,16 +157,6 @@ button{
     border: #AF8C73 solid 4px;
 
 }
-
-/* #startgame:hover, #quit:hover, #roll:hover, #pass:hover, #rollagain:hover{
-    background-color: #AF8C73;
-    
-    color: #FFF4E3;
-    
-    border-radius: 10px;
-    font-family: 'Abhaya Libre', serif;
-    font-weight: 800;
-} */
 
 #startgame:hover, #quit:hover{
     background-color: #AF8C73;
@@ -243,11 +176,6 @@ button{
     font-size: 30px;
     color: #AF8C73;
 }
-
-/* p{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
-} */
 
 h2{
     font-family: 'Abhaya Libre', serif;
