@@ -1,38 +1,39 @@
 (function(){
 	
 	"use strict";
-	/* 
-	This gets the player: gameData.players[gameData.index]
-	This gets the first die: gameData.dice[gameData.roll1-1]
-	This gets the second die: gameData.dice[gameData.roll2-1]
-	This gets the score of the current player: gameData.score[gameData.index]
-	*/
+	console.log("reading js");
 
+	//variables
 	const instructions = document.getElementById('instructions');
 	const startGame = document.getElementById('startgame');
 	const gameControl = document.getElementById('gamecontrol');
 	const game = document.getElementById('game');
-    // const showimage = document.getElementById('showimage');
 	const score = document.getElementById('score');
 	const actionArea = document.getElementById('actions');
     const exitbutton = document.getElementById('exit');
 
+	//audio
+	const audio = new Audio('sound/buttonclick.mp3');
+	const audio2 = new Audio('sound/winningsound.mp3');
+	
+
+	//exit button
     exitbutton.addEventListener('click', function(event){
         event.preventDefault();
         instructions.className = 'hidden'
         gameControl.className = 'showing'
-
+		audio.play();
+		
     })
 
+	//images of my boba for each turn 
 	const gameData = {
-		// dice: ['images/1die.jpg', 'images/2die.jpg', 'images/3die.jpg', 
-		// 	   'images/4die.jpg', 'images/5die.jpg', 'images/6die.jpg'],
         dice: ['images/boba1.png', 'images/boba2.png', 'images/boba3.png', 
 			   'images/boba4.png', 'images/boba5.png', 'images/boba6.png'],
 
-        // dice: ['images/boba1_1.png', 'images/boba2_1.png', 'images/boba3_1.png', 
-		// 	   'images/boba4_1.png', 'images/boba5_1.png', 'images/boba6_1.png'],
-		players: ['Player 1', 'Player 2'],
+
+		//variables
+		panda: ['Panda 1', 'Panda 2'],
 		score: [0, 0],
 		roll1: 0,
 		roll2: 0,
@@ -41,7 +42,10 @@
 		gameEnd: 29
 	};
 
+
+	//start the game 
 	startGame.addEventListener('click', function () {
+		audio.play();
 
         instructions.className = 'hidden';
         startGame.className = 'hidden';
@@ -51,52 +55,46 @@
         
 		gameData.index = Math.round(Math.random());
 		console.log(gameData.index);
-
-		// gameControl.innerHTML = '<h2>The Game Has Started</h2>';
         gameControl.innerHTML = '<h2></h2>';
         
 		gameControl.innerHTML += '<button id="quit">Quit</button>';
 
-		document
-			.getElementById('quit').addEventListener('click', function () {
-				location.reload();
+		//quit button
+		document.getElementById('quit').addEventListener('click', function () {
+			
+			
+			location.reload();
+			
 			});
 
+			audio.play();
 		setUpTurn();
+		
         
 	});
 
+	//set up the turn 
 	function setUpTurn() {
-		game.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
-		actionArea.innerHTML = '<button id="roll">Roll the Dice</button>';
+		
+		game.innerHTML = `<p>${gameData.panda[gameData.index]} pick your boba</p>`;
+		actionArea.innerHTML = '<button id="roll">Pick Boba</button>';
 		document.getElementById('roll').addEventListener('click', function(){
 
+			audio.play();
 			throwDice();
 
 		});
 	}
 
+
+	//pick boba
 	function throwDice(){
 		actionArea.innerHTML = '';
+		
         
 		gameData.roll1 = Math.floor(Math.random() * 6) + 1; //using ceil could result in a zero
 		gameData.roll2 = Math.floor(Math.random() * 6) + 1;
-		game.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
-
-
-
-
-
-
-		// game.innerHTML += `<img src="${gameData.dice[gameData.roll1-1]}"> 
-		// 					<img src="${gameData.dice[gameData.roll2-1]}">`;
-
-        // game.innerHTML += `<div id="showimage"><img src="${gameData.dice[gameData.roll1-1]}"> 
-		// 					<img src="${gameData.dice[gameData.roll2-1]}"></div>`;
-
-
-        // showimage.innerHTML += `<img src="${gameData.dice[gameData.roll1-1]}"> 
-		// 					<img src="${gameData.dice[gameData.roll2-1]}">`;
+		game.innerHTML = `<p>${gameData.panda[gameData.index]} pick your boba</p>`;
 
         
 		
@@ -118,8 +116,8 @@
 		// if either die is a 1...
 		else if(gameData.roll1 === 1 || gameData.roll2 === 1){ 
 			gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-			game.innerHTML += `<p>Sorry, one of your rolls was a one, switching to  ${
-				gameData.players[gameData.index]
+			game.innerHTML += `<p>Sorry, one of your drinks only has one boba, switching to  ${
+				gameData.panda[gameData.index]
 			}</p>`;
 			setTimeout(setUpTurn, 2000);
             // setTimeout(setUpTurn, 0);
@@ -128,41 +126,60 @@
 		// if neither die is a 1...
 		else { 
 			gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
-			actionArea.innerHTML = '<button id="rollagain">Roll again</button> <button id="pass">Pass</button>';
+			actionArea.innerHTML = '<button id="rollagain">Pick Again</button> <button id="pass">Pass</button>';
 
+			//roll again  and click buttons
 			document.getElementById('rollagain').addEventListener('click', function () {
-				//setUpTurn();
+				audio.play();
 				throwDice();
 			});
 
+			//pass and pick buttons
 			document.getElementById('pass').addEventListener('click', function () {
+				audio.play();
 				gameData.index ? (gameData.index = 0) : (gameData.index = 1);
 				setUpTurn();
 			});
 
+			//make sure the winning condition 
 			checkWinningCondition();
 		}
 
         game.innerHTML += `<div id="showimage"><img src="${gameData.dice[gameData.roll1-1]}"> 
-
-
-
-
-
-
-							<img src="${gameData.dice[gameData.roll2-1]}"></div>`;
+		<img src="${gameData.dice[gameData.roll2-1]}"></div>`;
 	}
+
 
 	function checkWinningCondition() {
 		if (gameData.score[gameData.index] > gameData.gameEnd) {
-			// score.innerHTML = `<h2>${gameData.players[gameData.index]} 
-			// wins with ${gameData.score[gameData.index]} points!</h2>`;
+			
+            score.innerHTML = `
+			<div id ="playerscore">
+            <div>
+				<img src="images/panda.png" alt="pandas"><br>
+                ${gameData.panda[0]}<br>
+                <br>
+                ${gameData.score[0]}
+            </div>
 
-            // score.innerHTML = `<h2>Scoreboard</h2> <p style=" font-family: 'Abhaya Libre', serif; font-size:30px; font-weight: 500; line-height:1.5em">${gameData.players[gameData.index]} 
-			// wins with ${gameData.score[gameData.index]} points!</p>`;
+			<div>
+                    <h1>Panda's Boba Shop</h1>
+                </div>
 
-            score.innerHTML = `<p style=" font-family: 'Abhaya Libre', serif; font-size:30px; font-weight: 500; line-height:1.5em">${gameData.players[gameData.index]} 
+            <div>
+				<img src="images/panda.png" alt="pandas"><br>
+                ${gameData.panda[1]}<br>
+                <br>
+                ${gameData.score[1]}
+            </div>
+        </div>
+		
+		<p style=" margin-top:0; font-family: 'Abhaya Libre', serif; font-size:30px; font-weight: 500; line-height:1.5em">${gameData.panda[gameData.index]} 
 			wins with ${gameData.score[gameData.index]} points!</p>`;
+			// showCurrentScore();
+			game.innerHTML = '';
+			audio2.play();
+			
 
 
 
@@ -175,43 +192,28 @@
 	}
 
 	function showCurrentScore() {
-		// score.innerHTML = `<h2>Scoreboard</h2><p>The score is currently <strong>${gameData.players[0]}
-		// ${gameData.score[0]}</strong> and <strong>${gameData.players[1]} 
-		// ${gameData.score[1]}</strong></p>`;
-
-        // score.innerHTML = `<h2>Scoreboard</h2>
-        // <div id ="playerscore">
-        //     <div>
-        //         ${gameData.players[0]}<br>
-        //         <br>
-        //         ${gameData.score[0]}
-        //     </div>
-
-        //     <div>
-        //         ${gameData.players[1]}<br>
-        //         <br>
-        //         ${gameData.score[1]}
-        //     </div>
-        // </div>
-        
-        // `;
         
         score.innerHTML = `
         <div id ="playerscore">
             <div>
-                ${gameData.players[0]}<br>
+				<img src="images/panda.png" alt="pandas"><br>
+                ${gameData.panda[0]}<br>
                 <br>
                 ${gameData.score[0]}
             </div>
 
+			<div>
+                    <h1>Panda's Boba Shop</h1>
+                </div>
+
             <div>
-                ${gameData.players[1]}<br>
+				<img src="images/panda.png" alt="pandas"><br>
+                ${gameData.panda[1]}<br>
                 <br>
                 ${gameData.score[1]}
             </div>
         </div>
-        
-        `;
+		`;
         
 	}
 }());
