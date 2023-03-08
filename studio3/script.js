@@ -61,7 +61,10 @@
 		console.log(gameData.index);
         gameControl.innerHTML = '<h2></h2>';
         
-		gameControl.innerHTML += '<button id="quit">Quit</button>';
+		// gameControl.innerHTML += '<button id="quit">Quit</button>';
+		gameControl.innerHTML += '<button id="quit"><i class="fa-solid fa-circle-xmark"></i></button>';
+
+		
 
 		//quit button
 		document.getElementById('quit').addEventListener('click', function () {
@@ -158,36 +161,52 @@
 			
             score.innerHTML = `
 			<div id ="playerscore">
-            <div>
-				<img src="images/panda.png" alt="pandas"><br>
-                ${gameData.panda[0]}<br>
-                <br>
-                ${gameData.score[0]}
-            </div>
+				<div id = "pscore">
+					<img src="images/panda.png" alt="pandas">
+					<p>${gameData.panda[0]}</p>
+					
+					<p id="number">${gameData.score[0]}</p>
+				</div>
 
-			<div>
-                    <h1>Panda's Boba Shop</h1>
-                </div>
+				<div>
+					<h1>Panda's Boba Shop</h1>
+				</div>
 
-            <div>
-				<img src="images/panda.png" alt="pandas"><br>
-                ${gameData.panda[1]}<br>
-                <br>
-                ${gameData.score[1]}
-            </div>
+				<div id="pscore">
+					<img src="images/panda.png" alt="pandas">
+					<p>${gameData.panda[1]}</p>
+					<p id="number">${gameData.score[1]}</p>
+				</div>
         </div>
 		
-		<p style=" margin-top:0; font-family: 'Abhaya Libre', serif; font-size:30px; font-weight: 500; line-height:1.5em">${gameData.panda[gameData.index]} 
+		
+
+		<p id="wintext">${gameData.panda[gameData.index]} 
 			wins with ${gameData.score[gameData.index]} points!</p>`;
+			game.className = 'hidden';
 			// showCurrentScore();
-			game.innerHTML = '';
+			// game.innerHTML = '';
+
+			
 			
 			
 
 
 
 			actionArea.innerHTML = '';
-			document.getElementById('quit').innerHTML = 'Start a New Game?';
+			// document.getElementById('quit').innerHTML = 'Start a New Game';
+			gameControl.innerHTML = '<button id="quit2">New Game</button>';
+			document.getElementById('quit2').addEventListener('click', function () {
+			
+			
+				location.reload();
+				
+				
+			});
+			
+
+
+
 		} else {
 			// show current score...
 			showCurrentScore();
@@ -198,26 +217,49 @@
 	function showCurrentScore() {
         
         score.innerHTML = `
-        <div id ="playerscore">
-            <div>
-				<img src="images/panda.png" alt="pandas"><br>
-                ${gameData.panda[0]}<br>
-                <br>
-                ${gameData.score[0]}
+       
+
+		<div id ="playerscore">
+            <div id = "pscore">
+				<img src="images/panda.png" alt="pandas">
+                <p>${gameData.panda[0]}</p>
+                
+                <p id="number">${gameData.score[0]}</p>
             </div>
 
 			<div>
                     <h1>Panda's Boba Shop</h1>
                 </div>
 
-            <div>
-				<img src="images/panda.png" alt="pandas"><br>
-                ${gameData.panda[1]}<br>
-                <br>
-                ${gameData.score[1]}
+            <div id="pscore">
+				<img src="images/panda.png" alt="pandas">
+				<p>${gameData.panda[1]}</p>
+                <p id="number">${gameData.score[1]}</p>
             </div>
         </div>
 		`;
         
 	}
 }());
+
+
+
+{/* <div id ="playerscore">
+<div id = "score1">
+	<img src="images/panda.png" alt="pandas"><br>
+	${gameData.panda[0]}<br>
+	<br>
+	${gameData.score[0]}
+</div>
+
+<div>
+		<h1>Panda's Boba Shop</h1>
+	</div>
+
+<div id="score1">
+	<img src="images/panda.png" alt="pandas"><br>
+	${gameData.panda[1]}<br>
+	<br>
+	${gameData.score[1]}
+</div>
+</div> */}
