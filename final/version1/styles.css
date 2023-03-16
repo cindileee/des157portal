@@ -9,7 +9,7 @@ body {
     display: flex;
     position: absolute;
     /* top:2350px; */
-    top:2500px;
+    top:2300px;
     left: 0;
     height: 100px;
    
@@ -33,14 +33,34 @@ body {
 
 
 
+/* #slider0 {
+    display: flex;
+    position: absolute;
+    top:1200px;
+    left: 0;
+    height: 100px;
+    transition: all 12s linear;
+    
+}
 
+#slider0 div img {
+    height: 100%;
+    display: block;
+    margin-right: 20px;
+    padding-right: 100px;
+}
+
+.g, .h{
+   display: flex;
+   height: 100%;
+} */
 
 
 
 #slider1 {
     display: flex;
     position: absolute;
-    top:4200px;
+    top:4000px;
     left: 0;
     height: 100px;
     transition: all 12s linear;
@@ -59,29 +79,121 @@ body {
    height: 100%;
 }
 
-
+/* #containerslider2 {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+}
 
 #slider2 {
     display: flex;
     position: absolute;
-    top:6650px;
+    width: 8000px;
+    top:0;
     left: 0;
-    /* height: 800px; */
-    transition: all 20s linear;
+
+    transition: all 60s linear;
     
     
+}
+
+#slider2 div img {
+    
+    height: 500px;
+    width: auto;
+    display: block;
+    margin-right: 20px;
+
+}
+
+.e, .f {
+   display: flex;
+   height: 500px;
+} */
+
+
+:root {
+    --sliderwidth2: ;
+}
+
+@keyframes moveSlider {
+    from { left: 0; }
+    to { left: var(--sliderwidth2) }
+}
+.animate {
+    animation-name: moveSlider;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* I added this for the section */
+#containerslider2 {
+    /* width: 100%;
+    overflow-x: hidden; */
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+}
+
+
+/* to make it go right, just change the left property to right */
+#slider2{
+    /* display: flex;
+    position: absolute;
+    top:0;
+    left: 0; 
+    height: 200px; */
+
+    display: flex;
+    position: absolute;
+    width: 8000px;
+    top:0;
+    left: 0;
+
+    transition: all 100s linear;
+    
+}
+
+#sliderpaused{
+    display: flex;
+    position: absolute;
+    top:0;
+    /*right: 0;  this is the only change! */
+    height: 200px;
 }
 
 #slider2 div img {
     height: 100%;
     display: block;
     margin-right: 20px;
-    padding-right: 100px;
 }
 
-.e, .f {
+.e, .f{
+   /* display: flex;
+   height: 100%; */
    display: flex;
-   height: 100%;
+   height: 500px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#favoritestext{
+    width:1000px;
+	margin:auto;
+    padding-bottom:50px;
 }
 
 
@@ -118,17 +230,34 @@ body {
 
 }
 
-#museum{
-    /* margin-top:250px; */
-}
+
 
 #museumtext{
     width:1150px;
-	margin:auto;
-    position: relative;
-    top: 1250px;
+	
+    /* position: relative; */
+    position: absolute;
+    
+    top: 950px;
+    left: 12%;
     color: #fff;
+   
 } 
+
+/* #museum img{
+    max-width: 100%;
+    height: auto;
+    margin:auto;
+    position: relative;
+} */
+
+#museum{
+    max-width: 100%;
+    height: auto;
+    margin:auto;
+    position: relative;
+}
+
 
 
 #one{
@@ -145,10 +274,11 @@ body {
     margin-top: 400px;
 }
 
-#favorites{
+/* #favorites{
     width:1000px;
 	margin:auto;
-}
+} */
+
 
 #container1, #container3{
 	display: flex;
@@ -186,12 +316,6 @@ h2{
 	
 }
 
-#museum img{
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin:auto;
-}
 
 
 
@@ -326,49 +450,6 @@ footer{
 
 img{
     display: block;
-}
-
-#overlay1 p, #overlay2 p, #overlay3 p{
-    color: #fff;
-    text-align: left;
-    font-size: 15px;
-    padding: 0;
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-}
-
-
-#container {
-    width: 1000px;
-    height: 600px;
-    overflow: hidden;
-    position: relative;
-    margin: auto;
-    margin-bottom:250px;
-}
-
-#dragon, #bats, #cuffs{
-    position: relative;
-}
-
-#dragon #overlay1{
-    left: -420px;
-}
-
-#bats #overlay2{
-    top:-200px;
-    left: -400px;
-}
-
-#cuffs #overlay3{
-    left: -650px;
-}
-
-#overlay1, #overlay2, #overlay3{
-    position: absolute;
-    width: 300px;
-    background-color: rgba(178, 152, 86, 0.9);
-    padding: 20px;
     
 }
 
@@ -378,6 +459,98 @@ img{
 
 
 
+
+
+#containerdragon {
+    /* width: 800px;
+    height: 547px;
+    overflow: hidden;
+    position: relative;
+    margin: auto; */
+
+    width: 1000px;
+    height: 750px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    margin-bottom:250px;
+}
+
+#containerdragon div {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+
+#containerdragon img {
+    display: block;
+    position: absolute;
+    transition: all 3s ease;
+    
+}
+
+/* Where to hover */
+
+#topleft {
+    top: 0;
+    left: 0;
+}
+
+#topright {
+    top: 0;
+    right: 0;
+}
+
+#center {
+    left: 41%;
+    top: 20%;
+    /* transform: translate(-50%, -50%); */
+}
+
+#bottomcenter{
+    bottom: 10%;
+    left: 42%;
+}
+
+
+
+
+
+
+.start {
+    width: 1000px;
+    /* height: 750px; */
+    left: 0;
+    top: 0;
+}
+
+.topleft,
+.topright,
+.center,
+.bottomcenter{
+    width: 3768px;
+}
+
+.topleft {
+    top: 0;
+    left: 0;
+}
+
+.topright {
+    top: 0;
+    left: -2968px;
+}
+
+.center {
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -24.5%);
+}
+
+.bottomcenter {
+    top: -1600px;
+    left: -1400px;
+}
 
 .hide{
     visibility: hidden;
@@ -392,70 +565,58 @@ img{
 
 
 
-/* zoom in style */
-.start{
-    transition: all 3s ease;     
-    width: 1000px;
-    
 
+
+
+
+
+/* 
+#dragon #overlay1{
+    top:300px;
+    left: -420px;
+} */
+
+
+
+#bats #overlay2{
+    top:-200px;
+    left: -400px;
 }
 
-/* dragon */
-.one{
-    position: absolute;
-    transition: all 3s ease;
-    width: 4000px;
-    top: -700px;
-    left: -1550px;
-}
-/* bats */
-.two{
-    position: absolute;  
-    transition: all 3s ease;
-    width: 3000px;
-    bottom: -500px;
-    left: -1000px;
-}
-/* cuffs */
-.three{
-    position: absolute;   
-    transition: all 3s ease;
-    width: 4000px;
-    top: -40px;
-   right: 0;
+#cuffs #overlay3{
+    left: -650px;
 }
 
-
-
-
-
-/* where to hover */
-#dragon, #cuffs, #bats{
+#overlay1, #overlay2, #overlay3{
     position: absolute;
     
-}
-
-#dragon{
-    height: 150px;
-    width: 120px;
-    top: 180px;
-    left: 450px;
+    width: 300px;
+    width: 400px;
+    background-color: rgba(178, 152, 86, 0.9);
+    padding: 20px;
     
 }
 
-#cuffs{
-    width: 100px;
-    height: 150px;
-    top: 0px;
-    right: 0;
+#overlay1{
+    margin-top:500px;
+    margin-left:50px;
+    /* transition: all 3s ease; */
 }
 
-#bats{
-    width: 150px;
-    height: 160px;
-    top: 60%;
-    left: 45%;
+
+#overlay1 p, #overlay2 p, #overlay3 p{
+    color: #fff;
+    text-align: left;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
 }
+
+
+
+
 
 
 
