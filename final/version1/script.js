@@ -41,7 +41,7 @@
         event.preventDefault();
         // overlay1[0].className = "hide";
         overlay1[0].className = "hide";
-        document.querySelector("#dragonimage").src = "images/dragonrobehighlight.png";
+        document.querySelector("#dragonimage").src = "images/dragonrobehighlight2.png";
         document.querySelector("#dragonimage").className = "start";
     });
 
