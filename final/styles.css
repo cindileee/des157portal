@@ -26,6 +26,7 @@ h2{
 
 h3{
     font-size: 30px;
+    font-family: 'Cormorant Garamond', serif;
     margin-bottom: 10px;
     color: #111111;
 }
@@ -37,16 +38,60 @@ p{
     color: #111111;
 }
 
+ol li{
+    font-size:20px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5em;
+    color: #111111;
+}
+
 
 a{
     text-decoration: none;
     color: #767676;
     font-size:15px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    
     
     
 
 }
 
+/* #uth2{
+    margin-bottom:30px;
+} */
+
 a:hover{
     color:  #95c0cb;
+}
+
+#utlink{
+    /* background-color: #95c0cb;
+    border-radius: 30px;
+    padding:20px; */
+    text-decoration: none;
+    color: #AB914F;
+    font-size:20px;
+    font-family: 'Open Sans', sans-serif;
+    
+    
+
+    
+}
+
+#utlink:hover{
+    color: #c5a657;
+}
+
+/* #utlink:hover{
+    background-color: rgb(169, 213, 224);
+} */
+
+video{
+    max-width: 100%;
+}
+
+#usertestimg{
+    border: solid black 1px;
 }
